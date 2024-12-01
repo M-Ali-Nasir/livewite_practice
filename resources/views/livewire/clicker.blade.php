@@ -52,11 +52,11 @@
     </div>
     <hr>
     <div
-        class="flex flex-col rounded-md shadow-lg shadow-rose-950 bg-red-950 justify-center items-center xl:w-1/3 p-1 min-[375px]:p-6">
+        class="flex flex-col rounded-md shadow-lg shadow-rose-950 bg-red-950 justify-center items-center xl:w-1/3 p-1 min-[375px]:p-6 relative">
         <h1 class="font-bold text-white text-3xl">All Users</h1>
 
         <table
-            class="min-w-full bg-transparent border border-gray-200 shadow-md rounded-lg mt-5 justify-center items-center gap-10 xl:w-1/3 p-2 min-[375px]:p-5">
+            class="min-w-full bg-transparent border border-gray-200 shadow-md rounded-lg mt-5 justify-center items-center gap-10 xl:w-1/3 p-2 min-[375px]:p-5 mb-20">
             <thead class="bg-gray-900 border-b border-gray-200">
                 <tr>
                     <th class="px-2 py-3 text-left text-sm font-medium text-white">ID</th>
@@ -76,6 +76,11 @@
                 @endforeach
             </tbody>
         </table>
+
+        <div class="py-5 w-11/12 absolute bottom-0">
+            {{ $users->links('vendor.livewire.pagination') }}
+        </div>
+
 
 
     </div>
