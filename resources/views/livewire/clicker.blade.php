@@ -1,4 +1,11 @@
-<div class="flex flex-col justify-center items-center gap-5 p-10 w-screen bg-gray-950">
+<div class="flex flex-col justify-center items-center gap-5 pt-16 p-10 w-screen bg-gray-950">
+
+    @if (session('success'))
+
+    <span class="fade-in-out absolute top-3 bg-green-950 px-10 py-3 rounded-3xl text-white ">{{ session('success')
+        }}</span>
+
+    @endif
 
     <div class="w-screen flex flex-col justify-center items-center px-5">
 
