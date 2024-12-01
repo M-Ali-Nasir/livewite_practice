@@ -5,20 +5,38 @@
         <form wire:submit="createNewUser"
             class="flex flex-col rounded-md shadow-lg shadow-rose-950 bg-red-950 justify-center items-center gap-10 xl:w-1/3 p-5 min-[375px]:p-10">
             <h1 class="font-bold text-white text-3xl">Create new User</h1>
-            <div class="w-full">
+            <div class="w-full relative">
                 <label for="name" class="text-white ps-2">Name</label>
                 <input class="bg-transparent px-3 py-2 text-white border mt-2 border-gray-950 rounded-3xl w-full"
                     type="text" id="name" wire:model="name">
+                @error('name')
+
+                <span class="text-red-300 absolute top-20 left-0">
+                    <i class="fa-solid fa-circle-xmark mx-2"></i>{{ $message }}
+                </span>
+                @enderror
             </div>
-            <div class="w-full">
+            <div class="w-full relative">
                 <label for="email" class="text-white ps-3">Email</label>
                 <input class="bg-transparent px-3 py-2 text-white border mt-2 border-gray-950 rounded-3xl w-full"
                     type="email" id="email" wire:model="email">
+                @error('email')
+
+                <span class="text-red-300 absolute top-20 left-0">
+                    <i class="fa-solid fa-circle-xmark mx-2"></i>{{ $message }}
+                </span>
+                @enderror
             </div>
-            <div class="w-full">
+            <div class="w-full relative">
                 <label for="password" class="text-white ps-2">Password</label>
                 <input class="bg-transparent px-3 py-2 text-white border mt-2 border-gray-950 rounded-3xl w-full"
                     type="password" id="password" wire:model="password">
+                @error('password')
+
+                <span class="text-red-300 absolute top-20 left-0">
+                    <i class="fa-solid fa-circle-xmark mx-2"></i>{{ $message }}
+                </span>
+                @enderror
             </div>
             <button class="px-10 py-2 border border-gray-950 rounded-3xl text-white">Create</button>
         </form>

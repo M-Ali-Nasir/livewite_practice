@@ -3,17 +3,26 @@
 namespace App\Livewire;
 
 use App\Models\User;
+use Livewire\Attributes\Rule;
 use Livewire\Component;
 
 class Clicker extends Component
 {
+    #[Rule('required|min:3|max:50')]
+    public $name;
 
-    public $name, $email, $password;
+    #[Rule('required|email|unique:users')]
+    public $email;
+
+    #[Rule('required|min:6|max:50')]
+    public $password;
 
 
 
     public function createNewUser()
     {
+        $this->validate();
+
         User::create([
             'name' => $this->name,
             'email' => $this->email,
