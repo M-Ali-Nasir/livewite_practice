@@ -69,9 +69,17 @@
                     </div>
 
 
-                    <button type="submit"
+                    <button type="submit" wire:loading.attr="disabled"
                         class="w-full text-white border bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Create
                         an account</button>
+                    <div wire:loading.delay class="w-full">
+                        <span class="text-green-500 text-xs"> Creating User.....</span>
+
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                            <div class="bg-blue-600 h-2.5 rounded-full w-full"></div>
+                        </div>
+
+                    </div>
                     <p class="text-sm font-light text-gray-500 dark:text-gray-400">
                         Already have an account? <a href="#"
                             class="font-medium text-primary-600 hover:underline dark:text-primary-500">Login

@@ -26,6 +26,7 @@ class RegisterForm extends Component
 
     public function create()
     {
+
         $validated = $this->validate();
 
         if ($this->image) {
