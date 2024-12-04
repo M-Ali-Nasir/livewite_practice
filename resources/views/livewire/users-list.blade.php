@@ -6,8 +6,7 @@
             <input wire:model.live.debounce.500="search" type="text"
                 class="ring-1 ring-inset ring-gray-600 bg-teal-900 text-slate-100 text-sm rounded py-2 px-4 w-1/2"
                 placeholder="search....">
-            <button wire:click="update" type="button"
-                class="block mt-3 px-4 py-2 rounded bg-teal-900 text-white hover:shadow-md hover:shadow-teal-800">Search</button>
+
         </div>
         <table
             class="min-w-full bg-transparent border border-gray-200 shadow-md rounded-lg mt-5 justify-center items-center gap-10 xl:w-1/3 p-2 min-[375px]:p-5 mb-20">

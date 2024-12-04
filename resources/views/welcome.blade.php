@@ -46,7 +46,8 @@
     <div class="flex">
 
         <div class="w-full">
-            @livewire('users-list')
+            {{-- @livewire('users-list') --}}
+            <livewire:users-list search="ali" />
         </div>
         {{-- <div class="w-2/4">
             @livewire('register-form')
