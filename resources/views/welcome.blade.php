@@ -46,7 +46,7 @@
     <div class="flex">
 
         <div class="w-full">
-            @livewire('users-list', ['lazy' => true])
+            @livewire('users-list')
         </div>
         {{-- <div class="w-2/4">
             @livewire('register-form')
