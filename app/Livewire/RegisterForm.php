@@ -21,7 +21,7 @@ class RegisterForm extends Component
     #[Rule('required|min:6|max:50')]
     public $password;
 
-    #[Rule('nullable|sometimes|image|max:5120')]
+    #[Rule('nullable|sometimes|image|max:20')]
     public $image;
 
     public function create()
@@ -39,13 +39,13 @@ class RegisterForm extends Component
 
         session()->flash('success', 'User created.');
 
-        $this->dispatch('user_created', $user);
+        // $this->dispatch('user_created', $user);
     }
 
-    public function reloadList()
-    {
-        $this->dispatch('user_created');
-    }
+    // public function reloadList()
+    // {
+    //     $this->dispatch('user_created');
+    // }
 
     public function render()
     {

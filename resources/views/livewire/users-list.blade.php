@@ -1,4 +1,4 @@
-<div class="flex flex-col items-center justify-center md:h-screen bg-teal-950">
+<div wire:poll.visible class="flex flex-col items-center justify-center md:h-screen bg-teal-950">
     <div class="px-2 py-8 mx-auto w-1/2 lg:py-0 relative">
         <h1 class="font-bold text-white text-3xl">All Users</h1>
 
